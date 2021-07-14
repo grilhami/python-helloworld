@@ -30,4 +30,4 @@ jobs:
           file: ./Dockerfile
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/python-helloworld:latest
+          tags: gilang1997/python-helloworld:latest

@@ -1,0 +1,20 @@
+namespace:
+  name: demo
+
+replicaCount: 3
+ 
+image:
+  repository: nginx
+  tag: alpine
+  pullPolicy: IfNotPresent
+
+resources:
+  memory: 256Mi
+  cpu: 50m
+
+service:
+  port: 8111
+  type: ClusterIP
+
+configmap:
+  version: alpine

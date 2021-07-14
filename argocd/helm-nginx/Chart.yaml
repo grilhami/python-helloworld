@@ -1,0 +1,9 @@
+apiVersion: v1
+name: nginx-deployment
+description: Setup Nginx with Helm
+keywords:
+- nginx
+version: 1.0.0
+maintainers:
+- name: gilang
+  email: gilang@xyz.com

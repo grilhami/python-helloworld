@@ -1,0 +1,11 @@
+apiVersion: v1
+name: helm-python-helloworld 
+description: Install a Python HelloWorld deployment using Helm
+keywords:
+- helm
+- python
+- helloworld 
+version: 1.0.0
+maintainers:
+- name: gilang
+  email: gilang@xyz.com

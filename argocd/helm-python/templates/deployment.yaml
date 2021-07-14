@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: helm-python-helloworld
+  name: helm-python-helloworld
+  namespace: {{ .Values.namespace.name }} 
+spec:
+  replicas: {{ .Values.replicaCount }} 
+  selector:
+    matchLabels:
+      app: helm-python-helloworld
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: helm-python-helloworld
+    spec:
+      containers:
+      - image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
+        imagePullPolicy: IfNotPresent 
+        name: helm-python-helloworld
